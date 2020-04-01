@@ -12,7 +12,7 @@ let venner = [
 
 
 function visVenner() {
-    venneliste.innerHTML = "<div>Navn</div><div>Alder</div>";
+    venneliste.innerHTML = "<div><strong>Navn</strong></div><div><strong>Alder</strong></div>";
 
     for(const venn of venner) {
         venneliste.innerHTML += `

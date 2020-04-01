@@ -1,29 +1,26 @@
-const listVarer = document.querySelector("#listFilm");
-const inpNyVare = document.querySelector("#inpNyfilm");
+const listFilm = document.querySelector("#listFilm");
+const inpNyfilm = document.querySelector("#inpNyfilm");
 const btn = document.querySelector("#btn");
 
-let varer = [];
+let filmer = [];
 
 
 function visFilm() {
 
-    listVarer.innerHTML = "";
+    listFilm.innerHTML = "";
 
-    for(const vare of varer) {
-        listVarer.innerHTML += `<li>${vare}</li>`;
+    for(const film of filmer) {
+        listFilm.innerHTML += `<li>${film}</li>`;
     }
     
-    inpNyVare.value = "";
-    inpNyVare.focus();
+    inpNyfilm.value = "";
+    inpNyfilm.focus();
     
 }
 
-
-
-
-function leggTilVare() {
-    varer = [inpNyVare.value, ...varer];
+function leggTilfilm() {
+    filmer = [inpNyfilm.value, ...filmer];
     visFilm();
 }
 
-btn.onclick = leggTilVare;
+btn.onclick = leggTilfilm;
